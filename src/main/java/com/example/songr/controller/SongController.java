@@ -1,5 +1,6 @@
-package com.example.songr;
+package com.example.songr.controller;
 
+import com.example.songr.Song;
 import com.example.songr.repositres.SongJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
