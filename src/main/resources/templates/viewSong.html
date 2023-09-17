@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>View Song</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<h1>Song Details</h1>
+<table>
+    <tr>
+        <td>Title:</td>
+        <td th:text="${song.title}"></td>
+    </tr>
+    <tr>
+        <td>Length (seconds):</td>
+        <td th:text="${song.length}"></td>
+    </tr>
+    <tr>
+        <td>Track Number:</td>
+        <td th:text="${song.trackNumber}"></td>
+    </tr>
+    <tr>
+        <td>Album:</td>
+        <td th:text="${song.album.title}"></td>
+    </tr>
+</table>
+<a th:href="@{/songs}">Back to Songs</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Song</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<h1>Add Song to Album</h1>
+<form th:action="@{/albums/{id}/addSong}(id=${album.id})" method="post" th:object="${song}">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" th:field="*{title}" required><br>
+
+    <label for="length">Length (seconds):</label>
+    <input type="number" id="length" name="length" th:field="*{length}" required><br>
+
+    <label for="trackNumber">Track Number:</label>
+    <input type="number" id="trackNumber" name="trackNumber" th:field="*{trackNumber}" required><br>
+
+    <input type="submit" value="Add Song">
+</form>
+<a th:href="@{/albums/{id}}(id=${album.id})">Back to Album</a>
+</body>
+</html>

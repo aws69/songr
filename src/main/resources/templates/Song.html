@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Songs</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<h1>Songs</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Length (seconds)</th>
+        <th>Track Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="song : ${songs}">
+        <td th:text="${song.title}"></td>
+        <td th:text="${song.length}"></td>
+        <td th:text="${song.trackNumber}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
